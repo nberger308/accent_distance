@@ -92,28 +92,7 @@ def phone_accuracy(word1, word2):
 
     matches = sum(1 for a, b in zip(word1, word2) if a == b)
     return matches / max_len
-
-def remove_duplicates_preserve_order(lst):
-    """
-    Removes duplicates from a list while preserving the original order.
-
-    Parameters:
-    lst (list): The input list with potential duplicates.
-
-    Returns:
-    tuple: A list of unique elements and their original indices.
-    """
-    seen = set()
-    result = []
-    indices = []
-
-    for i, word in enumerate(lst):
-        if word not in seen:
-            seen.add(word)
-            result.append(word)
-            indices.append(i)
-
-    return result, indices
+    
 
 def compare_text_files(file_a, file_b):
     """
