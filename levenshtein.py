@@ -74,24 +74,6 @@ def levenshtein(a, b, ratio=True, print_matrix=False):
         print(lev)
 
     return (n + m - lev[n, m]) / (n + m) if ratio else lev[n, m]
-
-def phone_accuracy(word1, word2):
-    """
-    Calculates the phone-level accuracy between two sequences by comparing them character by character.
-
-    Parameters:
-    word1 (str): The first word or phone sequence.
-    word2 (str): The second word or phone sequence.
-
-    Returns:
-    float: The ratio of matching phones between the two sequences.
-    """
-    max_len = max(len(word1), len(word2))
-    word1 = word1.ljust(max_len, '~')
-    word2 = word2.ljust(max_len, '~')
-
-    matches = sum(1 for a, b in zip(word1, word2) if a == b)
-    return matches / max_len
     
 
 def compare_text_files(file_a, file_b):
