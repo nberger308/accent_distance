@@ -5,6 +5,8 @@ The code was used to quantify the "accent similarity" of 14 accents (with each o
 The results, depicted as a heat map, are also included for reference.
 
 
+
+
 HEATMAP KEY:
 
 ABC = Abercrave, Wales
