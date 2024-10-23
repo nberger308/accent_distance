@@ -4,19 +4,34 @@ The code was used to quantify the "accent similarity" of 14 accents (with each o
 
 The results, depicted as a heat map, are also included for reference.
 
+
 HEATMAP KEY:
+
 ABC = Abercrave, Wales
+
 ABD1 = Aberdeen, Scotland
+
 CCL1 = County Clare, Ireland
+
 CDF = Cardiff, Wales
+
 EDI = Edinburgh, Scotland
+
 GAM = General American 
+
 GAU = General Australian
+
 GNZ = General New Zealand
+
 LDS = Leeds, England
+
 LDS1 = Leeds, England with no /h/-dropping feature
+
 NYC = New York City, USA
+
 NYC1 = New York City, USA with non-rhotic feature
+
 RPX = British Received Pronunciation
+
 SCA = South Carolina, USA
 
