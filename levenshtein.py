@@ -122,10 +122,6 @@ def compare_text_files(file_a, file_b):
         acc1_tokenized = [tokenize_by_phone_set(word, phone_pattern) for word in acc1_unique]
         acc2_tokenized = [tokenize_by_phone_set(acc2_words[i], phone_pattern) for i in indices]
 
-        print(f"acc1 number of words: {len(acc1_words)}")
-        print(f"acc2 number of words: {len(acc2_words)}")
-        print(f"acc1 length after tokenization: {len(acc1_tokenized)}")
-        print(f"acc2 length after tokenization: {len(acc2_tokenized)}")
 
         with open('acc1_out.txt', 'w') as out1, open('acc2_out.txt', 'w') as out2:
             for word in acc1_tokenized:
