@@ -124,12 +124,8 @@ directory =  '/path/to/directory' # replace path
 candidate_files = [os.path.join(directory, f) for f in os.listdir(directory) if 'SYLLS' in f]
 file_pairs = itertools.combinations(candidate_files, 2)
 
-similarity = {}
-diff_lens = []
-
-for file1, file2 in file_pairs:
-    print(f"Comparing {os.path.basename(file1)} vs {os.path.basename(file2)}")
-    diff_lens.append(compare_text_files(file1, file2))
-
-ave_diffs = np.mean(diff_lens)
-print(f"Average difference: {ave_diffs}")
+with open('difference_scores.txt', 'w') as diff_file:
+    for file1, file2 in file_pairs:
+        print(f"Comparing {os.path.basename(file1)} vs {os.path.basename(file2)}")
+        diff = compare_text_files(file1, file2)
+        diff_file.write(f"{os.path.basename(file1)} vs {os.path.basename(file2)}: {diff}\n")
