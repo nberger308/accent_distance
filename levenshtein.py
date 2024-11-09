@@ -35,6 +35,28 @@ def tokenize_by_phone_set(input_text, phone_pattern):
     """
     return phone_pattern.findall(input_text)
 
+def remove_duplicates_preserve_order(lst):
+    """
+    Removes duplicates from a list while preserving the original order.
+
+    Parameters:
+    lst (list): The input list with potential duplicates.
+
+    Returns:
+    tuple: A list of unique elements and their original indices.
+    """
+    seen = set()
+    result = []
+    indices = []
+
+    for i, word in enumerate(lst):
+        if word not in seen:
+            seen.add(word)
+            result.append(word)
+            indices.append(i)
+
+    return result, indices
+
 def levenshtein(a, b, ratio=True, print_matrix=False):
     """
     Computes the Levenshtein distance between two sequences.
